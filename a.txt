@@ -1,0 +1,25 @@
+Revert local changes to the last
+pushed github code
+Created by
+Created time
+Vedant Jain
+@July 23, 2024 3:10 PM
+Tags
+To revert your local changes and get your code back to the state of the last
+commit pushed to GitHub, you can follow these steps:
+1. Discard all local changes:
+This will discard any changes in the working directory and index:
+git reset --hard HEAD
+2. Ensure your local branch matches the remote branch:
+This will ensure that your local branch is in sync with the remote branch,
+effectively discarding any commits that were not pushed.
+git fetch origin
+git reset --hard origin/main
+Make sure to replace main with the name of your branch if it's different.
+Here's the combined command sequence:
+git reset --hard HEAD
+git fetch origin
+git reset --hard origin/main
+After running these commands, your local repository should match the state of the
+last commit pushed to GitHub. Be cautious, as these commands will discard any
+local changes permanently.
